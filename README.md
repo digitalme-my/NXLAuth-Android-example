@@ -45,6 +45,7 @@ And in `dependencies` block:
 ```
 dependencies {
   ...
+  implementation 'net.openid:appauth:0.7.0'
   implementation(name:'nxlauth', ext:'aar')
   ...
 }
