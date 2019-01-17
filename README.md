@@ -62,10 +62,14 @@ import my.com.nexlife.nxlauth.SDKScopes;
     AuthManager mAuthManager = new AuthManager.Builder("client-id", getApplicationContext())
         .setTag("LOGCAT TAG")
         .setScope(SDKScopes.OPEN_ID, SDKScopes.OFFLINE)
+        .setDev(false) // By default is false
         .build();
     ...
   }
 ```
+
+## Using staging mode
+To use staging mode, please call `.setDev(true)` while calling `Builder`. Please take note that you will need a different `client-id` than production to use staging mode. Please consult your Nexlife representative to assist you on this.
 
 ## Getting access token
 Given a successful authorization (build does not throw exception), a token request can be made and a token response can be retrieved via callback as per example below:
