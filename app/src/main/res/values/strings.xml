@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SSO Sample App</string>
+    <string name="nxlauth_client_id">93005e42-624f-4018-8b10-34aa0173a022</string>
+    <string name="base_url">https://dev-identity.nexlife.com.my</string>
 </resources>
