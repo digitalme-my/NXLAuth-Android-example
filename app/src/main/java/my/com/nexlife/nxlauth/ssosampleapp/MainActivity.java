@@ -36,9 +36,9 @@ public class MainActivity extends AppCompatActivity {
     logTextView.setMovementMethod(new ScrollingMovementMethod());
     logTextView.setTextIsSelectable(true);
 
-    mAuthManager = new AuthManager.Builder("0cc5ff74-9131-4b66-84e1-099c7390a910", getApplicationContext())
+    mAuthManager = new AuthManager.Builder(this.getResources().getString(R.string.nxlauth_client_id), getApplicationContext())
         .setTag("HEIMDALLSSO")
-        .setScope(SDKScopes.OPEN_ID, SDKScopes.OFFLINE)
+        .setScope("openid", "offline","profile", "email", "phone", "address", "passport", "organisation", "cmd:req_identification")
         .build();
   }
 
